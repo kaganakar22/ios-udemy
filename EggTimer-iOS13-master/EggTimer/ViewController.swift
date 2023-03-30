@@ -9,8 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let softTime = 5
+    let mediumTime = 7
+    let hardTime = 12
     
+    let eggTimes = ["Soft": 300, "Medium": 420, "Hard": 720]
     @IBAction func hardnessSelected(_ sender: UIButton) {
-        print(sender.currentTitle)
+        let hardness = sender.currentTitle!
+        let timeBoil = eggTimes[hardness]!
+        
     }
+    
 }
+    
+   
