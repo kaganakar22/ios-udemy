@@ -1,16 +1,20 @@
-import UIKit
-
-loveCalculator()
-
-func loveCalculator(){
-    let randomInt = Int.random(in: 1...100)
-    if randomInt < 50{
-        print("You bad, sorry")
-        print("Int was \(randomInt)")
+struct Town {
+    let name: String
+    var citizens: [String]
+    var resources: [String: Int]
+    
+    init(name: String, citizens: [String], resources: [String: Int]){
+        self.name = name
+        self.citizens = citizens
+        self.resources = resources
     }
-    else if 50 < randomInt{
-        print("U are the casanova bruv")
-        print("Int was \(randomInt)")
+    
+    func fortify() {
+        print("done! fortiqfications")
     }
-
 }
+
+var town = Town(name: "Kagan Diyari", citizens: ["ben","sen"], resources: ["su" : 100])
+print(town.citizens)
+town.citizens.append("kaganxxd")
+print(town.citizens)
