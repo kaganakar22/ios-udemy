@@ -32,7 +32,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet weak var heightSlide: UISlider!
+    @IBAction func calculatePressed(_ sender: UIButton) {
+        let height = heightSlide.value
+        let weight = weightSliderOutlet.value
+        let bmi = (weight)/pow(height,2)
+        print(bmi)
+        
+        
+    }
+    
+   
     
 }
 
